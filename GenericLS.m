@@ -31,12 +31,3 @@ price = max(K-S0, mean(CashFlows.*discountVet(ExerciseTime)));
 
 
 
-%Very similar to ExampleLS, and the only difference is that we use a cell
-%array, fhandles, of function handles to contain the set of basis
-%functions. Each element in the set of basis function is used to evaluate a
-%column in the regression matrix. To this aim, we use feval MatLab
-%function; this is, in some sense, a higher order function taking as
-%arguments another function and a set of arguments on which this should be
-%evaluated. Function handles are built in the script using the @ operator
-%and can be stored either in cell arrays or structs, not in ordinary
-%arrays; we have chosen the first possibility. 
